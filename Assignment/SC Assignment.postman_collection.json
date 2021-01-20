@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "826002c9-6ade-4341-8a26-8ced7c41e749",
+		"name": "SC Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sc_create?start=1&step=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sc_create"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "1"
+						},
+						{
+							"key": "step",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check task state by identifier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sc_check?id=32867d86-c529-41d0-bcd2-acd5c2fdb26a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sc_check"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "32867d86-c529-41d0-bcd2-acd5c2fdb26a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check current state of all tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/sc_checkall"
+			},
+			"response": []
+		},
+		{
+			"name": "Render all task states ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": "http://localhost:8080/sc_render"
+			},
+			"response": []
+		},
+		{
+			"name": "Clear counter",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sc_clear?id=8975ee4d-22fe-4b9f-abe4-42c98994e079",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sc_clear"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8975ee4d-22fe-4b9f-abe4-42c98994e079"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pause thread state by ID",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/sc_pause?id=3e266bc0-d432-4687-890c-5a451d551e30",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sc_pause"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3e266bc0-d432-4687-890c-5a451d551e30"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

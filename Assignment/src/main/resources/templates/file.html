@@ -1,0 +1,40 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport"
+	content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<title>Tasks</title>
+</head>
+
+<body>
+	<div class="container">
+		<h2 class="mt-4">Tasks</h2>
+
+		<table class="table">
+			<thead class="thead-light">
+				<tr>
+					<th class="text-left">Identifier</th>
+					<th class="text-left">Start</th>
+					<th class="text-left">Step</th>
+					<th class="text-left">CreationDate</th>
+					<th class="text-left">Count</th>
+					<th class="text-left"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="task : ${taskList}">
+					<td th:text="${task.identifier}"></td>
+					<td th:text="${task.start}"></td>
+					<td th:text="${task.step}"></td>
+					<td th:text="${task.creationDate}"></td>
+					<td th:text="${task.count}"></td>
+				</tr>
+			</tbody>
+		</table>
+		<hr />
+	</div>
+
+
+</body>
+</html>
